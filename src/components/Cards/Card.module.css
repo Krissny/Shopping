@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.CardImg {
+  width: 200px;
+}
+.CardImg:hover {
+  transform: scale(1.1);
+}
+
+.btnCont {
+  display: flex;
+  gap: 20px;
+}
+.buy {
+  padding: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 85, 0);
+  color: white;
+  border: none;
+}
+.buy:hover {
+  cursor: pointer;
+}
+.add {
+  padding: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 183, 0);
+  color: white;
+  border: none;
+}
+.add:hover {
+  cursor: pointer;
+}
