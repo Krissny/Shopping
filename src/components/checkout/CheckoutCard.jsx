@@ -1,7 +1,11 @@
-import { WiDayCloudy } from "react-icons/wi";
+import { useOutletContext } from "react-router-dom";
 import styles from "./CheckoutCard.module.css";
+import add from "../../Utility/add";
+import { useState } from "react";
 
 export default function CheckoutCard({ title, image, price }) {
+  const { cart, setCart } = useOutletContext();
+  const [quantity, setquantity] = useState(1);
   return (
     <div className={styles.cont}>
       <div className={styles.product}>
@@ -34,10 +38,15 @@ export default function CheckoutCard({ title, image, price }) {
       <div className={styles.buttons}>
         <div className={styles.quantity}>
           <button className={styles.quantBtn}>-</button>
-          <p className={styles.quant}>1</p>
+          <p className={styles.quant}>{quantity}</p>
           <button className={styles.quantBtn}>+</button>
         </div>
-        <button className={styles.remove}>Remove</button>
+        <button
+          className={styles.remove}
+          onClick={() => add(cart, setCart, title, image, price)}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );
