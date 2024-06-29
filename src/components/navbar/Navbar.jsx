@@ -1,12 +1,13 @@
 import styles from "./navbar.module.css";
 import Cart from "../../assets/cart-outline.svg";
-
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+
 export default function Navbar() {
   return (
     <div className={styles.cont}>
       <div className="logo">
-        <a href="#">
+        <Link to="/">
           <img
             style={{
               width: "130px",
@@ -14,14 +15,14 @@ export default function Navbar() {
             src={Logo}
             alt=""
           />
-        </a>
+        </Link>
       </div>
       <div className={styles.cart}>
-        <a
+        <Link
+          to="checkout"
           style={{
             textDecoration: "none",
           }}
-          href="#"
         >
           <img
             style={{
@@ -31,7 +32,7 @@ export default function Navbar() {
             alt=""
           />
           <span className={styles.count}>0</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
