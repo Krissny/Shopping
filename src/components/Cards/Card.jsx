@@ -1,6 +1,22 @@
+import { useState } from "react";
 import styles from "./Card.module.css";
 
-export default function Card({ title, image, price }) {
+export default function Card({ title, image, price, cart, setCart }) {
+  const [added, setAdded] = useState(cart.find((obj) => obj.title == title));
+  // console.log(added);
+  function add() {
+    if (added) {
+      let list = [...cart];
+      list = list.filter((obj) => obj.title != title);
+      setCart(list);
+      setAdded(false);
+    } else {
+      // list.push({ title, image, price }); //just for test
+      setCart([...cart, { title, image, price }]);
+      setAdded(true);
+    }
+    // console.log(list);
+  }
   return (
     <div className={styles.card}>
       <img className={styles.CardImg} src={image} alt="" />
@@ -19,7 +35,9 @@ export default function Card({ title, image, price }) {
       >{`$ ${price}`}</p>
       <div className={styles.btnCont}>
         <button className={styles.buy}>Buy</button>
-        <button className={styles.add}>Add to the Cart</button>
+        <button className={styles.add} onClick={() => add()}>
+          {!added ? "Add to the Cart" : "Remove from the Cart"}
+        </button>
       </div>
     </div>
   );

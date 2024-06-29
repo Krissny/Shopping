@@ -11,18 +11,18 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <Home />
       </>
     ),
-  },
-  {
-    path: "checkout",
-    element: (
-      <>
-        <Navbar />
-        <Checkout />
-      </>
-    ),
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
+      },
+    ],
   },
 ]);
 

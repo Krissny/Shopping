@@ -1,0 +1,33 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.payment {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+  background: wheat;
+  border-radius: 13px;
+  position: sticky;
+  bottom: 0;
+}
+.payment button {
+  color: white;
+  border: none;
+  background-color: #2ba112;
+  padding: 0px 21px;
+  font-weight: bold;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+.payment button:hover {
+  cursor: pointer;
+}
+
+.payment p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}

@@ -31,11 +31,12 @@
   cursor: pointer;
 }
 .add {
-  padding: 20px;
+  padding: 15px;
   font-weight: bold;
   background-color: rgb(255, 183, 0);
   color: white;
   border: none;
+  min-width: 170px;
 }
 .add:hover {
   cursor: pointer;
