@@ -42,10 +42,11 @@
   cursor: pointer;
 }
 .quant {
-  padding: 0px 8px 0px 8px;
+  padding: 2px 8px 1px 8px;
   border: 1px solid black;
   margin: 0px 6px 0px 6px;
   align-self: center;
+  width: 10px;
 }
 .remove {
   background-color: red;

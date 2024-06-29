@@ -1,8 +1,18 @@
 import { useOutletContext } from "react-router-dom";
 import CheckoutCard from "./CheckoutCard";
 import styles from "./checkout.module.css";
+import totalAmount from "../../Utility/totalAmount";
+import { useState } from "react";
+
 export default function Checkout() {
-  const { cart } = useOutletContext();
+  const { cart, setCart } = useOutletContext();
+
+  let amount = totalAmount(cart);
+
+  function placeOrder() {
+    alert("Your Order is placed!!\nNo need to pay\nBahut paisa hai");
+    setCart([]);
+  }
   return (
     <div>
       <div className={styles.items}>
@@ -31,8 +41,8 @@ export default function Checkout() {
       )}
       {cart.length != 0 && (
         <div className={styles.payment}>
-          <p>Total Amount : $ 567</p>
-          <button>Place Order</button>
+          <p>Total Amount : $ {amount}</p>
+          <button onClick={() => placeOrder()}>Place Order</button>
         </div>
       )}
     </div>
