@@ -1,0 +1,54 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.product {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.quantity {
+  display: flex;
+}
+.quantBtn {
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 26px;
+  width: 26px;
+  align-self: center;
+  background-color: white;
+}
+
+.quantBtn:hover {
+  cursor: pointer;
+}
+.quant {
+  padding: 0px 8px 0px 8px;
+  border: 1px solid black;
+  margin: 0px 6px 0px 6px;
+  align-self: center;
+}
+.remove {
+  background-color: red;
+  color: white;
+  border: none;
+}
+.remove:hover {
+  cursor: pointer;
+}
