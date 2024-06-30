@@ -3,5 +3,5 @@ export default function totalAmount(list) {
   list.forEach((element) => {
     amount += element.quantity * element.price;
   });
-  return amount;
+  return Math.round(amount * 100) / 100;
 }
