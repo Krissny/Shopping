@@ -3,7 +3,6 @@ import Card from "../Cards/Card";
 import "./home.css";
 import { useOutletContext } from "react-router-dom";
 export default function Home() {
-  // console.log(products);
   const context = useOutletContext();
   if (context.loading) return <p>Loading...</p>;
   if (context.error) return <p>Uh Oh! Something went wrong</p>;
