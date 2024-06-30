@@ -27,6 +27,7 @@
   color: white;
   border: none;
   text-decoration: none;
+  border-radius: 10px;
 }
 .buy:hover {
   cursor: pointer;
@@ -38,6 +39,7 @@
   color: white;
   border: none;
   min-width: 170px;
+  border-radius: 10px;
 }
 .add:hover {
   cursor: pointer;

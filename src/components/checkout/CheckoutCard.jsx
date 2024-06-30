@@ -9,8 +9,6 @@ export default function CheckoutCard({ title, image, price }) {
   let index = cart.findIndex((prod) => prod.title == title);
   function increase() {
     let list = [...cart];
-    // console.log(list);
-    // console.log(index);
     list[index].quantity += 1;
     setCart(list);
   }

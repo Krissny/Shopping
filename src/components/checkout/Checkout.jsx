@@ -10,7 +10,7 @@ export default function Checkout() {
   let amount = totalAmount(cart);
 
   function placeOrder() {
-    alert("Your Order is placed!!\nNo need to pay\nBahut paisa hai");
+    alert("Your Order is placed!!\nNo need to pay\nBahut paisa hai😎");
     setCart([]);
   }
   return (
