@@ -10,6 +10,8 @@
 
 .cart {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 .count {
   background: red;
